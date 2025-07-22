@@ -1,4 +1,4 @@
 # NeuroVision
 ## Dataset download link:
-"https://www.mindbigdata.com/opendb/imagenet.html"
+https://www.mindbigdata.com/opendb/imagenet.html
 
