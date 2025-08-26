@@ -1,11 +1,13 @@
-data/ 
+data/Class_Combined_Balanced_Dataset
+data/MindBigData-Imagenet
+data/Segregated_Dataset
+data/WordReport-v1.04.txt
 research-papers/
 models/
 reports/runs/
 *.ipynb_checkpoints
 *.pyc
 __pycache__/
-.env
 .vscode/
 .DS_Store
 *.pptx
