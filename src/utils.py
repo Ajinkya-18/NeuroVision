@@ -318,6 +318,21 @@ def reorganize_dataset(mapping_file, src_root, dst_root, move=False):
     
 #-------------------------------------------------------------------------------------------------------------------------
 
+def get_class_weights(dataset):
+    from collections import defaultdict
+    
+    train_cls_samples_count = defaultdict(float)
+    
+    for sample in dataset.samples:
+        cls_idx = sample[1]
+        train_cls_samples_count[cls_idx] += 1
+    
+    for cls_idx, count in train_cls_samples_count.items(): 
+        train_cls_samples_count[cls_idx] = round(count/len(dataset.samples), 4)
+
+    return train_cls_samples_count
+
+#--------------------------------------------------------------------------------------------------------------
 
 
 
