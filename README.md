@@ -4,8 +4,11 @@ The project's core contribution is a robust, direct-pathway architecture and a d
 
 ## **Architecture & Pipeline**
 The final, successful architecture avoids the "pseudo-image" bottleneck by creating a direct pathway from a domain-specific EEG encoder to the BLIP-2 Q-Former.
+
+**1. Pipeline Diagram**
 ![alt text](<reports/NeuroVision Pipeline.jpg>)
 
+**2. Architecture Diagram**
 ![alt text](<reports/NeuroVision-Final Year Project Research Paper.jpg>)
 
 ## **Key Features**
@@ -20,19 +23,24 @@ The final, successful architecture avoids the "pseudo-image" bottleneck by creat
 ## **The Project Journey & Key Findings**
 This project followed a rigorous experimental process that is as valuable as the final result.
 
-1. **Initial Goal & Failure:** The project began with the goal of direct EEG-to-Image reconstruction using models like GANs and Stable Diffusion. While these models could generate high-quality images, the core failure was a semantic accuracy bottleneck—the generated images were not conceptually related to the EEG stimulus.
+**1. Initial Goal & Failure:** 
+The project began with the goal of direct EEG-to-Image reconstruction using models like GANs and Stable Diffusion. While these models could generate high-quality images, the core failure was a semantic accuracy bottleneck—the generated images were not conceptually related to the EEG stimulus.
 
-2. **Pivotal Discovery:** An intermediate experiment using contrastive learning and a t-SNE visualization revealed that distinct semantic clusters do exist within the high-channel EEG data. This proved that the signal was present but the method of extraction was flawed.
+**2. Pivotal Discovery:** 
+An intermediate experiment using contrastive learning and a t-SNE visualization revealed that distinct semantic clusters do exist within the high-channel EEG data. This proved that the signal was present but the method of extraction was flawed.
 
-3. **Architectural Evolution:** This insight led to a pivot towards EEG-to-Text translation using BLIP-2.
-* Initial attempts to treat spectrograms as "pseudo-images" failed, as the model learned to describe the visual artifacts of the spectrograms themselves (e.g., "green and purple lines").
-* This led to the final, successful architecture: a powerful, from-scratch EEGTransformerEncoder that feeds its features directly to the BLIP-2 Q-Former.
-4. **Training Strategy Refinement:** A simple end-to-end training approach proved unstable and led to "catastrophic forgetting," where the language model's weights were damaged. This was solved by developing the decoupled two-stage curriculum with differential learning rates, which finally enabled stable and effective learning.
+**3. Architectural Evolution:** 
+This insight led to a pivot towards EEG-to-Text translation using BLIP-2.
+  * Initial attempts to treat spectrograms as "pseudo-images" failed, as the model learned to describe the visual artifacts of the spectrograms themselves (e.g., "green and purple lines").
+  * This led to the final, successful architecture: a powerful, from-scratch EEGTransformerEncoder that feeds its features directly to the BLIP-2 Q-Former.
+
+**4. Training Strategy Refinement:** 
+A simple end-to-end training approach proved unstable and led to "catastrophic forgetting," where the language model's weights were damaged. This was solved by developing the decoupled two-stage curriculum with differential learning rates, which finally enabled stable and effective learning.
 
 ## **Results**
 The final model, trained with the two-stage strategy, demonstrates a clear and successful learning trajectory.
-* **Quantitative:** The model achieves a final best validation loss of 16.42, a decrease of over 45% from the initial loss of 29.37, proving that the model is effectively learning.
-* **Qualitative:** The model successfully moves beyond generating random phrases to producing coherent sentences that show emergent semantic relevance to the ground truth.
+  * **Quantitative:** The model achieves a final best validation loss of 16.42, a decrease of over 45% from the initial loss of 29.37, proving that the model is effectively learning.
+  * **Qualitative:** The model successfully moves beyond generating random phrases to producing coherent sentences that show emergent semantic relevance to the ground truth.
 
 ## **Sample Visual Reconstruction**
 ![alt text](<reports/Final Recdonstructions.png>)
@@ -55,8 +63,7 @@ The final model, trained with the two-stage strategy, demonstrates a clear and s
     * Run the script to generate and save a grid of reconstructed images.
 
 4. **Future Work**
-
-This project serves as a strong foundation for several future research directions:
+  This project serves as a strong foundation for several future research directions:
     * Training for a larger number of epochs to allow the Q-Former to fully converge.
     * Extensive hyperparameter tuning of learning rates and loss weights.
     * A potential "Stage 3" of training to fine-tune the final layers of the large language model.
