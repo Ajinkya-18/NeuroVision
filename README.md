@@ -68,11 +68,11 @@ The final model, trained with the two-stage strategy, demonstrates a clear and s
 4. **Future Work**
 
   This project serves as a strong foundation for several future research directions:
-  
-      * Training for a larger number of epochs to allow the Q-Former to fully converge.
-      * Extensive hyperparameter tuning of learning rates and loss weights.
-      * A potential "Stage 3" of training to fine-tune the final layers of the large language model.
-      * Using the generated high-quality captions as prompts for text-to-image models to close the loop on the original EEG-to-Image reconstruction goal.
+
+    * Training for a larger number of epochs to allow the Q-Former to fully converge.
+    * Extensive hyperparameter tuning of learning rates and loss weights.
+    * A potential "Stage 3" of training to fine-tune the final layers of the large language model.
+    * Using the generated high-quality captions as prompts for text-to-image models to close the loop on the original EEG-to-Image reconstruction goal.
 
 
 ## MindBigData Dataset download link:
