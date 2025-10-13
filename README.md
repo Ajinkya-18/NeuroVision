@@ -6,9 +6,12 @@ The project's core contribution is a robust, direct-pathway architecture and a d
 The final, successful architecture avoids the "pseudo-image" bottleneck by creating a direct pathway from a domain-specific EEG encoder to the BLIP-2 Q-Former.
 
 **1. Pipeline Diagram**
+
 ![alt text](<reports/NeuroVision Pipeline.jpg>)
 
+
 **2. Architecture Diagram**
+
 ![alt text](<reports/NeuroVision-Final Year Project Research Paper.jpg>)
 
 ## **Key Features**
