@@ -33,7 +33,7 @@ The final model, trained with the two-stage strategy, demonstrates a clear and s
 * **Qualitative:** The model successfully moves beyond generating random phrases to producing coherent sentences that show emergent semantic relevance to the ground truth.
 
 ## **Sample Visual Reconstruction**
-[sample reconstructions]
+![alt text](<reports/Final Recdonstructions.png>)
 
 ## **How to Use**
 1. **Data Preparation**
