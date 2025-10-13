@@ -60,8 +60,12 @@ This project serves as a strong foundation for several future research direction
 * Using the generated high-quality captions as prompts for text-to-image models to close the loop on the original EEG-to-Image reconstruction goal.
 
 
-## Dataset download link:
+## MindBigData Dataset download link:
 https://www.mindbigdata.com/opendb/imagenet.html
+
+## Alljoined Dataset download link:
+https://huggingface.co/datasets/Alljoined/05_125
+https://linktr.ee/alljoined1
 
 ## Google Drive link for the Two-stage BLIP2 fine-tuned model with custom EEG feature extractor:
 https://drive.google.com/file/d/1bz0AXqew60FmHut-GaEh_OuS7wPR0BAo/view?usp=sharing
