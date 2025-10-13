@@ -65,6 +65,7 @@ https://www.mindbigdata.com/opendb/imagenet.html
 
 ## Alljoined Dataset download link:
 https://huggingface.co/datasets/Alljoined/05_125
+
 https://linktr.ee/alljoined1
 
 ## Google Drive link for the Two-stage BLIP2 fine-tuned model with custom EEG feature extractor:
