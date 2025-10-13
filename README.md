@@ -4,7 +4,9 @@ The project's core contribution is a robust, direct-pathway architecture and a d
 
 ## **Architecture & Pipeline**
 The final, successful architecture avoids the "pseudo-image" bottleneck by creating a direct pathway from a domain-specific EEG encoder to the BLIP-2 Q-Former.
-[arch diagram]
+![alt text](<reports/NeuroVision Pipeline.jpg>)
+
+![alt text](<reports/NeuroVision-Final Year Project Research Paper.jpg>)
 
 ## **Key Features**
 * Novel Direct-Pathway Architecture: A custom hybrid EEGTransformerEncoder connects directly to the BLIP-2 Q-Former, bypassing the vision encoder to avoid domain mismatch issues.
@@ -37,27 +39,28 @@ The final model, trained with the two-stage strategy, demonstrates a clear and s
 
 ## **How to Use**
 1. **Data Preparation**
-  * Download the "AllJoined" dataset and preprocess it into spectrograms. Place the data in the /content/final_lightweight_17k directory (or update the path in the config).
-  * Ensure the metadata.csv file is present.
-  * Run the data statistics script (calculate_stats.py, from our notebook) to generate spec_mean.pt and spec_std.pt.
-  * Run the caption generation script (generate_captions.py) once to create the train_gt_captions.json and val_gt_captions.json files.
+    * Download the "AllJoined" dataset and preprocess it into spectrograms. Place the data in the /content/final_lightweight_17k directory (or update the path in the config).
+    * Ensure the metadata.csv file is present.
+    * Run the data statistics script (calculate_stats.py, from our notebook) to generate spec_mean.pt and spec_std.pt.
+    * Run the caption generation script (generate_captions.py) once to create the train_gt_captions.json and val_gt_captions.json files.
     
 2. **Training**
-Modify the TRAIN_CONFIG class in the main training script to set your desired hyperparameters. Then,
-* Run the eeg-text-image.ipynb notebook to execute the training process as we have or with your own custom changes.
+    * Modify the TRAIN_CONFIG class in the main training script to set your desired hyperparameters. Then,
+    * Run the eeg-text-image.ipynb notebook to execute the training process as we have or with your own custom changes.
   
 3. **Inference**
-* Open the inference.ipynb notebook.
-* Update the BEST_MODEL_PATH in the INFERENCE_CONFIG to point to your best saved checkpoint.
-* Set your desired BATCH_SIZE.
-* Run the script to generate and save a grid of reconstructed images.
+    * Open the inference.ipynb notebook.
+    * Update the BEST_MODEL_PATH in the INFERENCE_CONFIG to point to your best saved checkpoint.
+    * Set your desired BATCH_SIZE.
+    * Run the script to generate and save a grid of reconstructed images.
 
 4. **Future Work**
+
 This project serves as a strong foundation for several future research directions:
-* Training for a larger number of epochs to allow the Q-Former to fully converge.
-* Extensive hyperparameter tuning of learning rates and loss weights.
-* A potential "Stage 3" of training to fine-tune the final layers of the large language model.
-* Using the generated high-quality captions as prompts for text-to-image models to close the loop on the original EEG-to-Image reconstruction goal.
+    * Training for a larger number of epochs to allow the Q-Former to fully converge.
+    * Extensive hyperparameter tuning of learning rates and loss weights.
+    * A potential "Stage 3" of training to fine-tune the final layers of the large language model.
+    * Using the generated high-quality captions as prompts for text-to-image models to close the loop on the original EEG-to-Image reconstruction goal.
 
 
 ## MindBigData Dataset download link:
@@ -70,3 +73,5 @@ https://linktr.ee/alljoined1
 
 ## Google Drive link for the Two-stage BLIP2 fine-tuned model with custom EEG feature extractor:
 https://drive.google.com/file/d/1bz0AXqew60FmHut-GaEh_OuS7wPR0BAo/view?usp=sharing
+
+
