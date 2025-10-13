@@ -66,6 +66,7 @@ The final model, trained with the two-stage strategy, demonstrates a clear and s
     * Run the script to generate and save a grid of reconstructed images.
 
 4. **Future Work**
+
   This project serves as a strong foundation for several future research directions:
     * Training for a larger number of epochs to allow the Q-Former to fully converge.
     * Extensive hyperparameter tuning of learning rates and loss weights.
