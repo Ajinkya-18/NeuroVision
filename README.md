@@ -46,9 +46,7 @@ The final model, trained with the two-stage strategy, demonstrates a clear and s
   * **Qualitative:** The model successfully moves beyond generating random phrases to producing coherent sentences that show emergent semantic relevance to the ground truth.
 
 ## **Performance Metrics**
-==================================================
-      NeuroVision Model Performance Evaluation Report
-==================================================
+#### NeuroVision Model Performance Evaluation Report
 
 BLEU Score: 2.34
   - Brevity Penalty (BP): 1.000 (1.0 is ideal)
