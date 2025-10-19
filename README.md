@@ -45,6 +45,27 @@ The final model, trained with the two-stage strategy, demonstrates a clear and s
   * **Quantitative:** The model achieves a final best validation loss of 16.42, a decrease of over 45% from the initial loss of 29.37, proving that the model is effectively learning.
   * **Qualitative:** The model successfully moves beyond generating random phrases to producing coherent sentences that show emergent semantic relevance to the ground truth.
 
+## **Performance Metrics**
+==================================================
+      NeuroVision Model Performance Evaluation Report
+==================================================
+
+BLEU Score: 2.34
+  - Brevity Penalty (BP): 1.000 (1.0 is ideal)
+
+ROUGE Scores:
+  - ROUGE-1 (Unigram): 30.04
+  - ROUGE-2 (Bigram):  7.23
+  - ROUGE-L (LCS):     27.51
+
+Error Rates (Lower is Better):
+  - Word Error Rate (WER): 132.68%
+  - Character Error Rate (CER): 101.95%
+
+Semantic Similarity (Higher is Better):
+  - Average Cosine Similarity: 0.1045
+
+
 ## **Sample Visual Reconstruction**
 ![alt text](<reports/Final Recdonstructions.png>)
 
