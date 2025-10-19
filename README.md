@@ -66,6 +66,15 @@ Semantic Similarity (Higher is Better):
   - Average Cosine Similarity: 0.1045
 
 
+| Metric | Score | Interpretation |
+|----------------------|-------------|-------------------------------------------------------------------|
+| ROUGE-1 | 30.04 | "(Primary Metric) High unigram overlap. This is a promising result, indicating the model is successfully decoding and generating semantically relevant keywords (e.g., ""dog,"" ""car"") from the EEG signals." |
+ROUGE-2 / ROUGE-L | 7.23 / 27.51 | "Lower bigram/LCS overlap, suggesting the model learns keywords but struggles with full sentence construction, which is an expected challenge." |
+| BLEU Score | 2.34 | "Low n-gram precision. This shows the generated sentences are not structurally identical to the ground truth, which is common in captioning tasks." |
+| Avg. Cosine Sim. | 0.1045 | "Low semantic similarity at the full sentence level, confirming that while keywords are present (from ROUGE-1), the overall sentence meaning is not yet fully aligned." |
+| WER / CER | ~132% / ~102% | "High error rates, which is expected given the low BLEU score and the extreme difficulty of translating non-linguistic EEG data directly into precise text." |
+
+
 ## **Sample Visual Reconstruction**
 ![alt text](<reports/Final Recdonstructions.png>)
 
